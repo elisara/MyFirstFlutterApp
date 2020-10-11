@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/page_widget.dart';
+import 'constants.dart' as Constants;
 
 void main() {
   runApp(MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'My first app',
       theme: ThemeData(
         //Must be Material color
         primarySwatch: Colors.purple,
@@ -29,16 +30,13 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int currentIndex = 0;
   final List<PageWidget> _pages = [
-    PageWidget("Home", Colors.orange),
-    PageWidget("books", Colors.yellow),
-    PageWidget("user", Colors.red)
+    PageWidget(Constants.ID_PAGE_HOME, Colors.orange),
+    PageWidget(Constants.ID_PAGE_BOOKS, Colors.yellow),
+    PageWidget(Constants.ID_PAGE_USER, Colors.red)
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("My first app!"),
-      ),
       bottomNavigationBar: _bottomNavigationBar(),
       body: _pages[currentIndex],
     );

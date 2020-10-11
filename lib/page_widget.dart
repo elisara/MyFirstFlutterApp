@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/page/book_page.dart';
+import 'package:my_first_app/page/home_page.dart';
+import 'package:my_first_app/page/user_page.dart';
+import 'constants.dart' as Constants;
 
 class PageWidget extends StatelessWidget {
-  final String title;
+  final String id;
   final Color color;
 
-  PageWidget(this.title, this.color);
+  PageWidget(this.id, this.color);
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +19,19 @@ class PageWidget extends StatelessWidget {
     return Scaffold(
       backgroundColor: color,
       body: Center(
-        child: Text(title),
+        child: _getSelecedPageById(id),
       ),
     );
+  }
+
+  Widget _getSelecedPageById(String id) {
+    print(id);
+    if (id == Constants.ID_PAGE_HOME) {
+      return HomePage();
+    } else if (id == Constants.ID_PAGE_BOOKS) {
+      return BookPage();
+    } else {
+      return UserPage();
+    }
   }
 }

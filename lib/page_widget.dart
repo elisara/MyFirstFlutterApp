@@ -6,9 +6,8 @@ import 'constants.dart' as Constants;
 
 class PageWidget extends StatelessWidget {
   final String id;
-  final Color color;
 
-  PageWidget(this.id, this.color);
+  PageWidget(this.id);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,6 @@ class PageWidget extends StatelessWidget {
 
   Widget _mainContainer() {
     return Scaffold(
-      backgroundColor: color,
       body: Center(
         child: _getSelecedPageById(id),
       ),

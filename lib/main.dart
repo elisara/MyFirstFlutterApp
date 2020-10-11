@@ -7,7 +7,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -30,9 +29,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int currentIndex = 0;
   final List<PageWidget> _pages = [
-    PageWidget(Constants.ID_PAGE_HOME, Colors.orange),
-    PageWidget(Constants.ID_PAGE_BOOKS, Colors.yellow),
-    PageWidget(Constants.ID_PAGE_USER, Colors.red)
+    PageWidget(Constants.ID_PAGE_HOME),
+    PageWidget(Constants.ID_PAGE_BOOKS),
+    PageWidget(Constants.ID_PAGE_USER)
   ];
   @override
   Widget build(BuildContext context) {
@@ -48,11 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
       onTap: _onBottomTabTabbed,
       fixedColor: Colors.red,
       items: [
-        BottomNavigationBarItem(icon: new Icon(Icons.home), label: "home"),
         BottomNavigationBarItem(
-            icon: new Icon(Icons.menu_book), label: "books"),
+            icon: new Icon(Icons.home), label: Constants.NAV_TITLE_HOME),
         BottomNavigationBarItem(
-            icon: new Icon(Icons.supervised_user_circle), label: "user"),
+            icon: new Icon(Icons.menu_book), label: Constants.NAV_TITLE_BOOKS),
+        BottomNavigationBarItem(
+            icon: new Icon(Icons.supervised_user_circle),
+            label: Constants.NAV_TITLE_USER),
       ],
     );
   }

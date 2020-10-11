@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/model/book.dart';
+import 'package:my_first_app/widget/book_list_widget.dart';
 
 class BookPage extends StatelessWidget {
   @override
@@ -13,7 +14,7 @@ class BookPage extends StatelessWidget {
         title: Text("Book page!"),
       ),
       backgroundColor: Colors.blue,
-      body: BookListLayout(_createBookList()),
+      body: BookListWidget(_createBookList()),
     );
   }
 

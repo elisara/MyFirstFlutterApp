@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/model/user.dart';
+import 'package:my_first_app/widget/user_widget.dart';
 
 class UserPage extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class UserPage extends StatelessWidget {
   Widget _userPageContainer() {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hello " + _getUser().name),
+        title: Text("Hello " + _getUser().name + "!"),
       ),
       backgroundColor: Colors.pink,
       body: UserWidget(_getUser()),

@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,7 +13,19 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Home page!"),
       ),
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.white,
+      body: _mapContainer(),
+    );
+  }
+
+  Widget _mapContainer() {
+    return Column(
+      children: [
+        Container(
+          margin: const EdgeInsets.all(16),
+          child: Text("Hi there! Welcome to my first flutter app!"),
+        ),
+      ],
     );
   }
 }

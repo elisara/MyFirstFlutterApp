@@ -2,6 +2,6 @@
 
 ## Includes e.g.: 
 - BottomNavigationBar
-- Dynamic listView
+- Dynamic ListView
 - Circle shaped image
 - Constants

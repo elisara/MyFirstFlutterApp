@@ -17,12 +17,12 @@ class PageWidget extends StatelessWidget {
   Widget _mainContainer() {
     return Scaffold(
       body: Center(
-        child: _getSelecedPageById(id),
+        child: _getSelectedPageById(id),
       ),
     );
   }
 
-  Widget _getSelecedPageById(String id) {
+  Widget _getSelectedPageById(String id) {
     print(id);
     if (id == Constants.ID_PAGE_HOME) {
       return HomePage();
